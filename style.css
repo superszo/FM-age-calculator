@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+}
+
+.card {
+    min-width: 840px;
+    background-color: #FFFFFF;
+    border-radius: 24px 24px 200px 24px ;
+}
+
+.calculator {
+    margin: 56px;
+    position: relative;
+}
+
+.user-input {
+    width: 100%;
+
+}
+
+label:nth-child(2) {
+    margin: 0 32px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.user-input {
+    display: flex;
+}
+
+.error {
+    color: #FF5959;
+    font-size: 14px;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-top: 8px;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #716F6F;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"] {
+    width: 160px;
+    color: #151515;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    appearance: textfield;
+    font-size: 32px;
+    letter-spacing: 1%;
+    font-weight: 700;
+    padding: 12px 24px;
+    margin-top: 8px;
+    outline: none;
+}
+
+input:focus {
+    outline: 1px solid #854DFF;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #854DFF;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #151515;
+}
+
+hr {
+    border: 0.5px solid #DCDCDC;
+    width: 100%;
+    position: absolute;
+}
+
+h1 {
+    font-size: 104px;
+    line-height: 110%;
+    letter-spacing: -2%;
+    font-style: italic;
+}
+
+span {
+    color: #854DFF;
+}
