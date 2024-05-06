@@ -116,13 +116,48 @@ hr {
     position: absolute;
 }
 
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
 h1 {
     font-size: 104px;
     line-height: 110%;
     letter-spacing: -2%;
     font-style: italic;
+    transition: --num 3s ;
+    counter-set: num var(--num);
 }
 
-span {
+h1::before {
     color: #854DFF;
 }
+
+#days-heading {
+    --content-1: '--';
+}
+
+#days-heading::before {
+    content: var(--content-1);
+}
+
+#months-heading {
+    --content-2: '--';
+}
+
+#months-heading::before {
+    content: var(--content-2);
+}
+
+#years-heading {
+    --content-3: '--';
+}
+
+#years-heading::before {
+    content: var(--content-3);
+}
+
+
+
