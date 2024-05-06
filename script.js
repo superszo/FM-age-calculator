@@ -1,7 +1,3 @@
-import { intervalToDuration } from "./node_modules/date-fns/intervalToDuration.mjs";
-import { isValid } from "./node_modules/date-fns/isValid.mjs";
-import { compareAsc } from "./node_modules/date-fns/compareAsc.mjs";
-
 let dayInput = document.getElementById('day');
 let monthInput = document.getElementById('month');
 let yearInput = document.getElementById('year');
@@ -76,10 +72,10 @@ submit.addEventListener('click', function () {
     var userDate = new Date(yearInput.value, monthInput.value - 1, dayInput.value);
     var todayDate = new Date();
 
-    if (isValid(userDate) && dayCorrect && monthCorrect && yearCorrect && compareAsc(todayDate, userDate) === 1) {
+    if (dateFns.isValid(userDate) && dayCorrect && monthCorrect && yearCorrect && dateFns.compareAsc(todayDate, userDate) === 1) {
         
 
-        var difference = intervalToDuration({
+        var difference = dateFns.intervalToDuration({
             start: userDate,
             end: new Date()
         })
